@@ -1,0 +1,15 @@
+title: Witt Scafidi
+description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
+baseurl: ""
+url: "https://wittscafidi.github.io"
+
+author:
+  name: Witt Scafidi
+  email: wittscafidi@gmail.com
+  linkedin: "https://linkedin.com/in/witt-scafidi"
+  phone: "(540) 333-4257"
+
+plugins:
+  - jekyll-seo-tag
+
+markdown: kramdown
