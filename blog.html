@@ -1,0 +1,23 @@
+---
+layout: page
+title: Writing
+heading: Writing
+subtitle: "Thoughts on performance, data, and living deliberately"
+---
+
+<section class="section">
+  <div class="container">
+    <div class="post-list">
+      {% for post in site.posts %}
+      <a href="{{ post.url | relative_url }}" class="post-card fade-in">
+        <div class="post-card-meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <h2 class="post-card-title">{{ post.title }}</h2>
+        {% if post.excerpt %}
+        <p class="post-card-excerpt">{{ post.excerpt }}</p>
+        {% endif %}
+        <span class="post-card-read">Read &rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
