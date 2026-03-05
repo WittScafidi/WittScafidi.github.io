@@ -8,28 +8,28 @@
 
 ---
 
-## Deployment Workflow (Important)
-- There is **no git push** — a 403 auth error blocks it
-- All deploys are done via **manual drag-and-drop upload** through the GitHub web UI
-- GitHub Pages auto-rebuilds after each upload (takes 1–3 minutes)
-- After uploading, do a **hard refresh** (`Cmd+Shift+R`) to bypass browser cache
+## Git & GitHub Setup
+
+### Authentication
+- **Method:** SSH via `~/.ssh/id_ed25519`
+- SSH key is registered on GitHub under the account `WittScafidi`
+- GitHub account email: `williamscafidi@gmail.com`
+- Remote URL: `git@github.com:WittScafidi/WittScafidi.github.io.git`
+- To verify SSH works: `ssh -T git@github.com` (should say "Hi WittScafidi! You've successfully authenticated")
+
+### Deployment Workflow
+All files are tracked in git. Standard push flow:
+```
+git add <files>
+git commit -m "message"
+git push origin main
+```
+- GitHub Pages auto-rebuilds after every push (takes 1–3 minutes)
+- After pushing, do a **hard refresh** (`Cmd+Shift+R`) to bypass browser cache
 - To check build status: GitHub repo → **Settings → Pages**
 
-### Upload locations
-| File type | Where to upload on GitHub |
-|-----------|--------------------------|
-| Root HTML files | Repo root |
-| `_layouts/*.html` | `_layouts/` folder |
-| `assets/css/main.css` | `assets/css/` folder |
-| Images | `assets/images/` folder |
-| Resume PDF | `assets/files/` folder |
-| Blog posts | `_posts/` folder |
-
-### GitHub folder creation trick
-GitHub won't create empty folders. To create one via web UI:
-1. "Add file" → "Create new file"
-2. Type `foldername/placeholder.txt` in the filename field
-3. Commit, then upload real files, then delete placeholder
+### Important history note
+All site files were previously uploaded via GitHub's web UI (drag-and-drop), which created a separate commit history on the remote. These histories were merged with `--allow-unrelated-histories` in March 2026. Going forward, everything is fully git-tracked and pushes should work cleanly.
 
 ---
 
@@ -61,7 +61,7 @@ GitHub won't create empty folders. To create one via web UI:
 ## Key Files
 ```
 witt-resume/
-├── index.html               # Homepage (hero, about, experience teaser, Spotify, photos, contact)
+├── index.html               # Homepage (hero, about, experience teaser, music, photos, contact)
 ├── experience.html          # Full work history
 ├── education.html           # W&M degree, coursework
 ├── skills.html              # Skills grid (Languages, Data, Operations, Leadership)
@@ -102,6 +102,7 @@ witt-resume/
 | Class | Purpose |
 |-------|---------|
 | `.section` | Standard content section |
+| `.section-alt` | Alternate (off-white) background section |
 | `.section-dark` | Dark navy background section |
 | `.page-banner` | Dark header on sub-pages (title + subtitle) |
 | `.fade-in` / `.fade-in.visible` | Scroll-reveal animation |
@@ -110,9 +111,12 @@ witt-resume/
 | `.exp-photo` | Experience page photo block |
 | `.skill-group` / `.skill-tag` | Skills page cards and pills |
 | `.page-content` | Flex wrapper for sticky footer |
+| `.top-songs-grid` | Two-column grid for top song cards |
+| `.top-song-card` | Individual song card (album art + info) |
+| `.music-sub-label` | Small uppercase label within music section |
 
 ### Sticky footer
-`body` uses `display: flex; flex-direction: column; min-height: 100vh` and `.page-content { flex: 1 }` to push the footer to the bottom on short pages.
+`body` uses `display: flex; flex-direction: column; min-height: 100vh` and `.page-content { flex: 1 }` to push the footer to the bottom on short pages. The `<main class="page-content">` wrapper is in `_layouts/default.html`.
 
 ---
 
@@ -135,9 +139,22 @@ witt-resume/
 1. Hero (name, subtitle with degree/minor, CTA buttons)
 2. About
 3. Experience teaser
-4. Spotify (static, no API)
-5. Off the Clock (photo gallery — 4 personal photos, mosaic layout)
-6. Contact
+4. Education teaser
+5. Skills teaser
+6. Athletics teaser
+7. On Rotation — music section (see below)
+8. Off the Clock (photo gallery — 4 personal photos, mosaic layout)
+9. Contact
+
+### Music section ("On Rotation / What I'm Listening To")
+- Single combined section with two sub-sections separated by `.music-sub-label`
+- **Top Songs** (first): two cards side-by-side on desktop, stacked on mobile
+  - "Little More Money" — Whiskey Myers (album art from Spotify CDN)
+  - "Withdrawals" — Treaty Oak Revival, track ID `534HisyBf0uYG3Qz0J8zfE` (West Texas Degenerate album)
+- **Playlists** (below): three Spotify playlist cards (static, no API)
+  - Friday Night Fever (Country)
+  - TMeUp (Rock & Metal)
+  - haze (Classic Rock)
 
 ### Experience page
 - Timeline of work history
@@ -158,4 +175,4 @@ The macOS sandbox **blocks terminal access to the Downloads folder**. `cp` and f
 - Config: `.claude/launch.json`
 - Start via `preview_start` tool (name: "jekyll")
 - Runs at `http://localhost:4000`
-- Note: `.fade-in` elements start at `opacity: 0` — run `document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'))` in preview_eval before screenshotting
+- Note: `.fade-in` elements start at `opacity: 0` — run `document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'))` in `preview_eval` before screenshotting
