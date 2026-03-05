@@ -1,20 +1,52 @@
----
-layout: default
-title: Witt Scafidi — Digital Resume
-description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Witt Scafidi | Digital Resume</title>
+  <meta name="description" content="BBA in Business Analytics & Data Science at William & Mary | D1 Baseball" />
 
-<!-- ==============================
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/assets/images/headshot.jpg" alt="Witt Scafidi" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/experience">Experience</a></li>
+        <li><a href="/education">Education</a></li>
+        <li><a href="/skills">Skills</a></li>
+        <li><a href="/athletics">Athletics</a></li>
+        <li><a href="/blog">Writing</a></li>
+        <li><a href="/resume" class="nav-cta">Resume</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==============================
      HERO
      ============================== -->
 <section id="hero" class="hero">
   <div class="hero-content">
-    <p class="hero-eyebrow">Hello, I'm</p>
+    <p class="hero-eyebrow">Hey, my name is</p>
     <h1 class="hero-name">Witt Scafidi</h1>
     <p class="hero-tagline">Business &amp; Data Professional &nbsp;&middot;&nbsp; D1 Athlete &nbsp;&middot;&nbsp; Entrepreneur</p>
-    <p class="hero-subtitle">BBA Candidate &mdash; Raymond A. Mason School of Business, William &amp; Mary</p>
+    <p class="hero-subtitle">BBA in Business Analytics &amp; Data Science &nbsp;&middot;&nbsp; Data Science Minor &nbsp;&middot;&nbsp; Raymond A. Mason School of Business, William &amp; Mary</p>
     <div class="hero-cta">
-      <a href="#experience" class="btn btn-primary">View My Work</a>
+      <a href="#about" class="btn btn-primary">Learn More</a>
       <a href="/assets/files/witt-scafidi-resume.pdf" class="btn btn-outline" download>Download Resume</a>
     </div>
   </div>
@@ -25,7 +57,7 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
 </section>
 
 <!-- ==============================
-     ABOUT / VALUE PROPOSITION
+     ABOUT
      ============================== -->
 <section id="about" class="section">
   <div class="container">
@@ -35,9 +67,9 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
     </div>
     <div class="about-grid">
       <div class="about-text fade-in">
-        <p class="lead">I'm a data-driven business professional who builds systems, leads people, and ships results — both in the boardroom and on the diamond.</p>
-        <p>Currently pursuing a BBA at William &amp; Mary's Raymond A. Mason School of Business (GPA: 3.76), I've spent the last several years proving that entrepreneurial thinking and analytical rigor aren't mutually exclusive. From founding two businesses before my senior year of college to leading a 50-person team at a Target distribution center, I operate at the intersection of <strong>operations, data, and strategy</strong>.</p>
-        <p>As a Division 1 baseball player, I've learned that performance is a system — and systems can always be optimized.</p>
+        <p class="lead">I'm a data-driven business professional who builds systems, leads people, and ships results, both in the boardroom and on the diamond.</p>
+        <p>Currently pursuing a BBA in Business Analytics with Data Science (Data Science Minor) at William &amp; Mary's Raymond A. Mason School of Business (GPA: 3.76), I've spent the last several years proving that entrepreneurial thinking and analytical rigor aren't mutually exclusive. From founding two businesses before my senior year of college to leading a 50-person team at a Target distribution center, I operate at the intersection of <strong>operations, data, and strategy</strong>.</p>
+        <p>As a Division 1 baseball player, I've learned that performance is a system, and systems can always be optimized.</p>
         <div class="about-contact">
           <a href="mailto:wittscafidi@gmail.com" class="contact-chip">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
@@ -53,35 +85,39 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
           </a>
         </div>
       </div>
-      <div class="about-values fade-in">
-        <div class="value-card">
-          <div class="value-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
-          </div>
-          <h3>Builder</h3>
-          <p>I don't wait for opportunities — I create them. Founded two companies, designed data platforms from scratch, and built forecasting models that actually drive decisions.</p>
+      <div class="about-photo fade-in">
+        <img src="/assets/images/headshot.jpg" alt="Witt Scafidi headshot" />
+      </div>
+    </div>
+
+    <div class="about-values-row fade-in">
+      <div class="value-card">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
         </div>
-        <div class="value-card">
-          <div class="value-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
-          </div>
-          <h3>Analyst</h3>
-          <p>Python, SQL, sentiment analysis, relational databases — I turn messy, unstructured data into actionable intelligence with real business impact.</p>
+        <h3>Builder</h3>
+        <p>I don't wait for opportunities. I create them. Founded two companies, designed data platforms from scratch, and built forecasting models that actually drive decisions.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
         </div>
-        <div class="value-card">
-          <div class="value-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/></svg>
-          </div>
-          <h3>Competitor</h3>
-          <p>D1 athletics builds a different kind of professional — one who executes under pressure, adapts fast, and never stops pushing for better.</p>
+        <h3>Analyst</h3>
+        <p>Python, SQL, sentiment analysis, relational databases: I turn messy, unstructured data into actionable intelligence with real business impact.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/></svg>
         </div>
+        <h3>Competitor</h3>
+        <p>D1 athletics builds a different kind of professional, one who executes under pressure, adapts fast, and never stops pushing for better.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ==============================
-     EXPERIENCE
+     EXPERIENCE TEASER
      ============================== -->
 <section id="experience" class="section section-alt">
   <div class="container">
@@ -89,102 +125,33 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
       <span class="section-label">Experience</span>
       <h2>Professional Background</h2>
     </div>
-
-    <div class="timeline">
-
-      <!-- Select Biosciences -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3>Founder &amp; Data Systems Architect</h3>
-              <p class="timeline-org">Select Biosciences, LLC</p>
-            </div>
-            <span class="timeline-date">Aug 2025 &ndash; Present</span>
-          </div>
-          <ul>
-            <li>Founded and developed a data-driven analytics platform for vendor and product intelligence.</li>
-            <li>Designed relational databases to support vendor tracking, product classification, and performance history.</li>
-            <li>Built interactive dashboards to monitor sales, sentiment, and operational metrics.</li>
-            <li>Developed a Python sentiment analysis pipeline integrating VADER to score companies from unstructured community data.</li>
-            <li>Implemented scoring frameworks to translate qualitative sentiment into quantitative vendor reliability metrics.</li>
-            <li>Automated backend workflows using n8n to streamline data ingestion, processing, and reporting.</li>
-            <li>Applied analytics outputs directly to product prioritization and platform strategy.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">VADER NLP</span>
-            <span class="tag">Relational DBs</span>
-            <span class="tag">n8n</span>
-            <span class="tag">Dashboards</span>
-            <span class="tag">Entrepreneurship</span>
-          </div>
+    <div class="fade-in">
+      <div class="teaser-preview-card">
+        <span class="teaser-label-badge">Current Role</span>
+        <h3>Founder &amp; Data Systems Architect</h3>
+        <p class="timeline-org">Select Biosciences, LLC &nbsp;&middot;&nbsp; Aug 2025 &ndash; Present</p>
+        <ul class="teaser-bullets">
+          <li>Founded a data-driven analytics platform for vendor and product intelligence.</li>
+          <li>Built a Python sentiment analysis pipeline (VADER) to score companies from unstructured data.</li>
+          <li>Automated backend workflows using n8n to streamline data ingestion and reporting.</li>
+        </ul>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">VADER NLP</span>
+          <span class="tag">n8n</span>
+          <span class="tag">Relational DBs</span>
         </div>
       </div>
-
-      <!-- Target -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3>Operations Manager Intern</h3>
-              <p class="timeline-org">Target Distribution Center &mdash; Stuarts Draft, VA</p>
-            </div>
-            <span class="timeline-date">Summer 2025</span>
-          </div>
-          <ul>
-            <li>Led daily operations for a 50-person workforce across automated conveyor and manual dock processing zones.</li>
-            <li>Managed throughput of approximately 60,000 packages per day while maintaining service level targets.</li>
-            <li>Built Excel-based throughput forecasting models using per-head productivity by zone, adjusting for shift labor deductions.</li>
-            <li>Analyzed unloading velocity across processing sections to identify operational bottlenecks.</li>
-            <li>Reallocated staffing between two 20-person conveyor zones and a 10-person non-conveyable zone to optimize flow.</li>
-            <li>Balanced trailer flow between automated and manual systems to maximize end-to-end throughput.</li>
-            <li>Made time-critical staffing and trailer assignment decisions under high-volume conditions.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag">Operations Management</span>
-            <span class="tag">Forecasting</span>
-            <span class="tag">Excel</span>
-            <span class="tag">Workforce Mgmt</span>
-            <span class="tag">Logistics</span>
-          </div>
-        </div>
+      <div class="teaser-cta-row">
+        <p class="teaser-more-hint">+ 2 more roles: Operations Manager Intern at Target &amp; Founder of Couch On Wheels</p>
+        <a href="/experience" class="btn btn-primary">View Full Experience &rarr;</a>
       </div>
-
-      <!-- Couch on Wheels -->
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3>Founder &amp; Operator</h3>
-              <p class="timeline-org">Couch On Wheels &mdash; Harrisonburg, VA</p>
-            </div>
-            <span class="timeline-date">May 2020 &ndash; Aug 2023</span>
-          </div>
-          <ul>
-            <li>Founded and scaled a furniture delivery and resale business serving a price-conscious market.</li>
-            <li>Identified market inefficiencies and built a sustainable secondary-market solution.</li>
-            <li>Optimized delivery routing and logistics coordination to improve operational efficiency.</li>
-            <li>Built repeat business through personalized service and operational reliability.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag">Entrepreneurship</span>
-            <span class="tag">Operations</span>
-            <span class="tag">Logistics</span>
-            <span class="tag">Customer Success</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
 <!-- ==============================
-     EDUCATION
+     EDUCATION TEASER
      ============================== -->
 <section id="education" class="section">
   <div class="container">
@@ -192,64 +159,33 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
       <span class="section-label">Education</span>
       <h2>Academic Background</h2>
     </div>
-    <div class="edu-grid">
-
-      <!-- William & Mary -->
-      <div class="edu-card featured fade-in">
-        <div class="edu-card-header">
+    <div class="fade-in">
+      <div class="edu-teaser">
+        <div class="edu-teaser-header">
           <div>
             <h3>College of William &amp; Mary</h3>
             <p class="edu-degree">Bachelor of Business Administration</p>
-            <p class="edu-school">Raymond A. Mason School of Business</p>
+            <p class="edu-school">Business Analytics with Data Science &nbsp;&middot;&nbsp; Data Science Minor</p>
+            <p class="edu-school">Raymond A. Mason School of Business &nbsp;&middot;&nbsp; Aug 2023 &ndash; May 2026</p>
           </div>
-          <div class="edu-meta">
-            <span class="edu-gpa">3.76 GPA</span>
-            <span class="edu-dates">Aug 2023 &ndash; May 2026</span>
-          </div>
+          <span class="edu-gpa">3.76 GPA</span>
         </div>
         <ul class="edu-honors">
           <li><span class="honor-badge">&#127885;</span> Provost Award Recipient, 2023 &ndash; 2026</li>
-          <li><span class="honor-badge">&#127885;</span> Jennings Scholarship Recipient, Phi Beta Kappa Chapter</li>
-          <li><span class="honor-badge">&#127885;</span> Student-Athlete Advisory Council Representative, 2025 &ndash; 2026</li>
+          <li><span class="honor-badge">&#127885;</span> Jennings Scholarship, Phi Beta Kappa Chapter</li>
+          <li><span class="honor-badge">&#127885;</span> Student-Athlete Advisory Council Rep., 2025 &ndash; 2026</li>
         </ul>
       </div>
-
-      <div class="edu-row">
-        <!-- Bryant & Stratton -->
-        <div class="edu-card fade-in">
-          <div class="edu-card-header">
-            <div>
-              <h3>Bryant &amp; Stratton College</h3>
-              <p class="edu-degree">Business Administration Coursework</p>
-            </div>
-            <div class="edu-meta">
-              <span class="edu-gpa">4.0 GPA</span>
-              <span class="edu-dates">Sep 2022 &ndash; May 2023</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Spotswood -->
-        <div class="edu-card fade-in">
-          <div class="edu-card-header">
-            <div>
-              <h3>Spotswood High School</h3>
-              <p class="edu-degree">Advanced Degree</p>
-            </div>
-            <div class="edu-meta">
-              <span class="edu-gpa">4.23 GPA</span>
-              <span class="edu-dates">Graduated June 2022</span>
-            </div>
-          </div>
-        </div>
+      <div class="teaser-cta-row">
+        <p class="teaser-more-hint">+ Bryant &amp; Stratton College (4.0 GPA) &amp; Spotswood High School (4.23 GPA)</p>
+        <a href="/education" class="btn btn-primary">View Full Education &rarr;</a>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- ==============================
-     SKILLS
+     SKILLS TEASER
      ============================== -->
 <section id="skills" class="section section-alt">
   <div class="container">
@@ -257,49 +193,136 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
       <span class="section-label">Skills</span>
       <h2>Technical Toolkit</h2>
     </div>
-    <div class="skills-grid fade-in">
+    <div class="skills-teaser fade-in">
+      <div class="skills-teaser-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">RStudio</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">Sentiment Analysis</span>
+        <span class="skill-tag">VADER NLP</span>
+        <span class="skill-tag">Relational Databases</span>
+        <span class="skill-tag">Data Pipelines</span>
+        <span class="skill-tag">Forecast Modeling</span>
+        <span class="skill-tag">n8n</span>
+        <span class="skill-tag">Process Automation</span>
+        <span class="skill-tag">Workforce Management</span>
+      </div>
+      <div class="teaser-cta-row" style="justify-content:center;">
+        <a href="/skills" class="btn btn-primary">View Full Toolkit &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="skill-group">
-        <h3>Languages &amp; Tools</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">RStudio</span>
-          <span class="skill-tag">Excel</span>
-          <span class="skill-tag">n8n</span>
+<!-- ==============================
+     ATHLETICS TEASER
+     ============================== -->
+<section id="athletics" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Athletics</span>
+      <h2>Division 1 Baseball</h2>
+    </div>
+    <div class="athletics-teaser fade-in">
+      <div class="athletics-teaser-photo">
+        <img src="/assets/images/baseball.jpg" alt="Witt Scafidi batting for William &amp; Mary Tribe Baseball" />
+      </div>
+      <div class="athletics-teaser-info">
+        <h3>William &amp; Mary Tribe Baseball</h3>
+        <p class="athletics-subtitle">Williamsburg, VA &nbsp;&middot;&nbsp; August 2023 &ndash; Present</p>
+        <p>Competing at the D1 level while maintaining a 3.76 GPA, a testament to the discipline, time management, and relentless drive that defines everything I do.</p>
+        <div class="teaser-stats-row">
+          <div class="teaser-stat-item">
+            <span class="stat-number">D1</span>
+            <span class="stat-label">Athlete</span>
+          </div>
+          <div class="teaser-stat-item">
+            <span class="stat-number">3.76</span>
+            <span class="stat-label">GPA</span>
+          </div>
+          <div class="teaser-stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Seasons</span>
+          </div>
+        </div>
+        <a href="/athletics" class="btn btn-primary">View Athletics &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     SPOTIFY
+     ============================== -->
+<section id="listening" class="section section-alt">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">On Rotation</span>
+      <h2>What I'm Listening To</h2>
+    </div>
+    <div class="spotify-grid fade-in">
+
+      <!-- Playlist 1: Friday Night Fever -->
+      <div class="spotify-card">
+        <div class="spotify-cover-wrap">
+          <img src="https://mosaic.scdn.co/300/ab67616d00001e0214d09c1ad67f2028764ee0f4ab67616d00001e02249b1ba5e1add8453447c741ab67616d00001e0224c31b71730078493c8a68f4ab67616d00001e02499cf6c0830a1ae6f1ba8275"
+               alt="Friday Night Fever playlist cover" class="spotify-cover" />
+        </div>
+        <div class="spotify-info">
+          <p class="spotify-meta">11 tracks &middot; Country</p>
+          <ul class="spotify-tracks">
+            <li><span class="track-title">Friday Night Fever</span><span class="track-artist">George Strait</span></li>
+            <li><span class="track-title">Parachute</span><span class="track-artist">Chris Stapleton</span></li>
+            <li><span class="track-title">Missed Call</span><span class="track-artist">Treaty Oak Revival</span></li>
+            <li><span class="track-title">Don't Wanna Say Goodnight</span><span class="track-artist">Wyatt Flores</span></li>
+          </ul>
+          <a href="https://open.spotify.com/playlist/4F1dntK6FHIutWr55DHvs4" target="_blank" rel="noopener" class="spotify-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Open in Spotify
+          </a>
         </div>
       </div>
 
-      <div class="skill-group">
-        <h3>Data &amp; Analytics</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Sentiment Analysis</span>
-          <span class="skill-tag">VADER NLP</span>
-          <span class="skill-tag">Relational Databases</span>
-          <span class="skill-tag">Data Pipelines</span>
-          <span class="skill-tag">Forecast Modeling</span>
-          <span class="skill-tag">Dashboard Design</span>
+      <!-- Playlist 2: TMeUp -->
+      <div class="spotify-card">
+        <div class="spotify-cover-wrap">
+          <img src="https://mosaic.scdn.co/300/ab67616d00001e021f9edf15e43f4c2f4938b869ab67616d00001e029a9b1cc067e4460da04adce2ab67616d00001e02b3e1f355a5c8a2ad3b1aae48ab67616d00001e02ff191d7fbdb5a13eaf84132b"
+               alt="TMeUp playlist cover" class="spotify-cover" />
+        </div>
+        <div class="spotify-info">
+          <p class="spotify-meta">53 tracks &middot; Rock &amp; Metal</p>
+          <ul class="spotify-tracks">
+            <li><span class="track-title">Thunderstruck</span><span class="track-artist">AC/DC</span></li>
+            <li><span class="track-title">Enter Sandman</span><span class="track-artist">Metallica</span></li>
+            <li><span class="track-title">Highway to Hell</span><span class="track-artist">AC/DC</span></li>
+            <li><span class="track-title">Master of Puppets</span><span class="track-artist">Metallica</span></li>
+          </ul>
+          <a href="https://open.spotify.com/playlist/3osdevztzjlHukIuIVV7pZ" target="_blank" rel="noopener" class="spotify-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Open in Spotify
+          </a>
         </div>
       </div>
 
-      <div class="skill-group">
-        <h3>Operations &amp; Strategy</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Process Automation</span>
-          <span class="skill-tag">Workforce Management</span>
-          <span class="skill-tag">Logistics Optimization</span>
-          <span class="skill-tag">Throughput Analysis</span>
-          <span class="skill-tag">Strategic Planning</span>
+      <!-- Playlist 3: haze -->
+      <div class="spotify-card">
+        <div class="spotify-cover-wrap">
+          <img src="https://mosaic.scdn.co/300/ab67616d00001e02be6e758fe8300a72eceddb8fab67616d00001e02c9adfbd773852e286faed040ab67616d00001e02db1fb2dede292908e86d94d7ab67616d00001e02e3e85d72b9e52e3e11385e5d"
+               alt="haze playlist cover" class="spotify-cover" />
         </div>
-      </div>
-
-      <div class="skill-group">
-        <h3>Leadership</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Team Leadership</span>
-          <span class="skill-tag">Entrepreneurship</span>
-          <span class="skill-tag">High-Pressure Decision Making</span>
-          <span class="skill-tag">Cross-functional Collaboration</span>
+        <div class="spotify-info">
+          <p class="spotify-meta">15 tracks &middot; Classic Rock</p>
+          <ul class="spotify-tracks">
+            <li><span class="track-title">Locomotive Breath</span><span class="track-artist">Jethro Tull</span></li>
+            <li><span class="track-title">Fire</span><span class="track-artist">Jimi Hendrix</span></li>
+            <li><span class="track-title">Sunshine Of Your Love</span><span class="track-artist">Cream</span></li>
+            <li><span class="track-title">Whipping Post</span><span class="track-artist">Allman Brothers Band</span></li>
+          </ul>
+          <a href="https://open.spotify.com/playlist/5HcsLWK08X4ByKvdrCVQZH" target="_blank" rel="noopener" class="spotify-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Open in Spotify
+          </a>
         </div>
       </div>
 
@@ -308,43 +331,27 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
 </section>
 
 <!-- ==============================
-     ATHLETICS
+     PHOTO GALLERY
      ============================== -->
-<section id="athletics" class="section">
+<section id="life" class="section">
   <div class="container">
     <div class="section-header fade-in">
-      <span class="section-label">Athletics</span>
-      <h2>Division 1 Baseball</h2>
+      <span class="section-label">Personal</span>
+      <h2>Off the Clock</h2>
     </div>
-    <div class="athletics-content">
-
-      <div class="athletics-text fade-in">
-        <h3>William &amp; Mary Tribe Baseball</h3>
-        <p class="athletics-subtitle">Williamsburg, VA &nbsp;&middot;&nbsp; August 2023 &ndash; Present</p>
-        <p>Competing at the Division 1 level isn't just an athletic achievement — it's a masterclass in performance under pressure. Balancing a rigorous D1 schedule with a full academic load at a Top 40 national university has sharpened the same skills that make me effective professionally: <strong>discipline, adaptability, and the ability to perform when it counts.</strong></p>
-        <ul class="athletics-list">
-          <li>Collaborated with coaching staff to evaluate pitching performance and optimize staff utilization</li>
-          <li>Maintained a 3.76 GPA while competing at the highest collegiate level</li>
-          <li>Developed resilience and adaptability through high-stakes competition</li>
-          <li>Represented student-athlete interests on the Advisory Council, 2025&ndash;2026</li>
-        </ul>
+    <div class="photo-grid fade-in">
+      <div class="photo-tile">
+        <img src="/assets/images/IMG_6558.JPG" alt="On the water with friends" />
       </div>
-
-      <div class="athletics-stats fade-in">
-        <div class="stat-card">
-          <span class="stat-number">D1</span>
-          <span class="stat-label">Collegiate Athlete</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">3.76</span>
-          <span class="stat-label">GPA While Competing</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">2+</span>
-          <span class="stat-label">Years at W&amp;M</span>
-        </div>
+      <div class="photo-tile">
+        <img src="/assets/images/IMG_4662.jpg" alt="Evening out with friends" />
       </div>
-
+      <div class="photo-tile">
+        <img src="/assets/images/IMG_6094.jpg" alt="Night out with friends" />
+      </div>
+      <div class="photo-tile">
+        <img src="/assets/images/IMG_7149.JPG" alt="Getting ready with a friend" />
+      </div>
     </div>
   </div>
 </section>
@@ -365,3 +372,52 @@ description: "BBA Candidate at William & Mary | Data & Operations | D1 Baseball"
     </div>
   </div>
 </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p class="footer-name">Witt Scafidi</p>
+      <div class="footer-links">
+        <a href="mailto:wittscafidi@gmail.com">wittscafidi@gmail.com</a>
+        <a href="https://linkedin.com/in/witt-scafidi" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/assets/files/witt-scafidi-resume.pdf" download>Download Resume</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Witt Scafidi</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll behavior
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+      });
+    });
+
+    // Scroll-reveal via IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athletics</title>
+  <meta name="description" content="BBA in Business Analytics & Data Science at William & Mary | D1 Baseball" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/assets/images/headshot.jpg" alt="Witt Scafidi" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/experience">Experience</a></li>
+        <li><a href="/education">Education</a></li>
+        <li><a href="/skills">Skills</a></li>
+        <li><a href="/athletics">Athletics</a></li>
+        <li><a href="/blog">Writing</a></li>
+        <li><a href="/resume" class="nav-cta">Resume</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-banner">
+  <div class="container">
+    <div class="page-breadcrumb">
+      <a href="/">&#8592; Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Athletics</span>
+    </div>
+    <h1 class="page-banner-title">Division 1 Baseball</h1>
+    <p class="page-banner-sub">William &amp; Mary Tribe Baseball · Williamsburg, VA</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="fade-in">
+      <img
+        src="/assets/images/baseball.jpg"
+        alt="Witt Scafidi batting for William &amp; Mary Tribe Baseball"
+        class="baseball-hero-photo"
+      />
+    </div>
+
+    <div class="athletics-content">
+      <div class="athletics-text fade-in">
+        <h3>William &amp; Mary Tribe Baseball</h3>
+        <p class="athletics-subtitle">Williamsburg, VA &nbsp;&middot;&nbsp; August 2023 &ndash; Present</p>
+        <p>Competing at the Division 1 level isn't just an athletic achievement. It's a masterclass in performance under pressure. Balancing a rigorous D1 schedule with a full academic load at a Top 40 national university has sharpened the same skills that make me effective professionally: <strong>discipline, adaptability, and the ability to perform when it counts.</strong></p>
+        <ul class="athletics-list">
+          <li>Collaborated with coaching staff to evaluate pitching performance and optimize staff utilization</li>
+          <li>Maintained a 3.76 GPA while competing at the highest collegiate level</li>
+          <li>Developed resilience and adaptability through high-stakes competition</li>
+          <li>Represented student-athlete interests on the Advisory Council, 2025&ndash;2026</li>
+        </ul>
+      </div>
+
+      <div class="athletics-stats fade-in">
+        <div class="stat-card">
+          <span class="stat-number">D1</span>
+          <span class="stat-label">Collegiate Athlete</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3.76</span>
+          <span class="stat-label">GPA While Competing</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Years at W&amp;M</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container text-center">
+    <div class="fade-in">
+      <h2>Let's Connect</h2>
+      <p class="contact-sub">Open to new opportunities, conversations, and collaborations.</p>
+      <div class="contact-links">
+        <a href="mailto:wittscafidi@gmail.com" class="btn btn-primary">wittscafidi@gmail.com</a>
+        <a href="https://linkedin.com/in/witt-scafidi" target="_blank" rel="noopener" class="btn btn-outline-light">LinkedIn</a>
+        <a href="/assets/files/witt-scafidi-resume.pdf" class="btn btn-outline-light" download>Download Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p class="footer-name">Witt Scafidi</p>
+      <div class="footer-links">
+        <a href="mailto:wittscafidi@gmail.com">wittscafidi@gmail.com</a>
+        <a href="https://linkedin.com/in/witt-scafidi" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/assets/files/witt-scafidi-resume.pdf" download>Download Resume</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Witt Scafidi</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll behavior
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active');
+    });
+
+    // Close nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+      });
+    });
+
+    // Scroll-reveal via IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
