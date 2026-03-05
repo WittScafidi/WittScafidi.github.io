@@ -1414,6 +1414,16 @@ footer {
    PHOTO GALLERY (Off the Clock)
    ============================================================ */
 
+/* MUSIC SUB-LABELS */
+.music-sub-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
 /* TOP SONG */
 .top-song-card {
   display: flex;
