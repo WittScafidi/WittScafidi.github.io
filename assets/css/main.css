@@ -1424,6 +1424,16 @@ footer {
   margin-bottom: 1rem;
 }
 
+/* TOP SONGS GRID */
+.top-songs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 600px) {
+  .top-songs-grid { grid-template-columns: 1fr; }
+}
+
 /* TOP SONG */
 .top-song-card {
   display: flex;
@@ -1433,8 +1443,7 @@ footer {
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 2.5rem;
-  max-width: 560px;
+  padding: 2rem;
 }
 .top-song-icon {
   flex-shrink: 0;
